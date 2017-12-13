@@ -1,14 +1,9 @@
-%% load training samples
+%% load training data
 load train3.mat
 
 %% feature tuning (criterion and min_leaf_size
 trainX = X;
 trainY = Y;
-c = cvpartition(Y,'Holdout',0.3);
-trainX = X(training(c),:);
-trainY = Y(training(c),:);
-testX = X(test(c),:);
-testY = Y(test(c),:);
 
 errGini = zeros(1,5);
 for i = 1:5
