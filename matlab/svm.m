@@ -49,4 +49,4 @@ Mdl = fitcecoc(X,Y,'Learner',t);
 
 load test.mat
 Yhat = predict(Mdl, testX);
-accuracy = sum(str2num(char(Yhat)) == testY) / size(testY,1);
+accuracy = sum(Yhat == testY) / size(testY,1);
